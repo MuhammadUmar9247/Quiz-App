@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Quiz Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<div class="container">
+
+<!-- LOGIN -->
+<div id="login">
+<h2>Advanced Quiz Login</h2>
+<input id="name" placeholder="Enter your name">
+<div class="toggle">
+  <span>Voice Mode</span>
+  <div id="voiceToggle" class="switch"></div>
+</div>
+<button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" style="display:none">
+<h2 id="user"></h2>
+<select id="category" onchange="loadQuiz()">
+<option value="">Select Category</option>
+<option value="html">HTML</option>
+<option value="css">CSS</option>
+<option value="js">JavaScript</option>
+<option value="mix">Mixed</option>
+</select>
+
+<h3 id="question"></h3>
+<div id="options"></div>
+
+<button onclick="voiceAnswer()">🎤 Speak Answer</button>
+<button onclick="nextQuestion()">Next</button>
+
+<div class="score" id="result"></div>
+</div>
+
+<script src="./javascript.js"></script>
+</body>
+</html>
